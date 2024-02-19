@@ -12,7 +12,7 @@ def video_to_text(video_path, output_text_path):
         with sr.AudioFile("temp_audio.wav") as source:
             audio_data = recognizer.record(source)
 
-        text = recognizer.recognize_google(audio_data, language="en-US")
+        text = recognizer.recognize_google(audio_data, language="ru-RU")
 
         with open(output_text_path, "w") as text_file:
             text_file.write(text)
